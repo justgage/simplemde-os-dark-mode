@@ -1,16 +1,39 @@
 // codemirror.css is prepended via gulp
 
+:root {
+  --color-background: white;
+  --color-text: black;
+  --color-text-muted: rgb(170, 170, 170);
+  --color-border: #ddd;
+  --color-background: white;
+
+  --color-background-faded: darken(white, 5%);
+  --color-background-selected: rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #1f2937;
+    --color-text: #f9fafb;
+    --color-text-muted: #6b7280;
+    --color-border: transparent;
+
+    --color-background-faded: lighten(#1f2937, 5%);
+    --color-background-selected: rgba(0, 0, 0, 0.1);
+  }
+}
+
 // Edit _custom.scss to customlize your styles
-@import 'custom';
+@import "custom";
 // Don't edit _variables.scss, edit _custom.scss instead
-@import 'variables';
+@import "variables";
 
-@import 'codemirror-origin';
+@import "codemirror-origin";
 // Override some codemirror styles
-@import 'codemirror-override';
+@import "codemirror-override";
 
-@import 'textarea';
-@import 'preview';
+@import "textarea";
+@import "preview";
 
 //
 // If your css framework doesn't contain typography styles
@@ -18,8 +41,8 @@
 //
 // @import 'typography';
 
-@import 'table';
-@import 'embeded';
+@import "table";
+@import "embeded";
 
-@import 'toolbar';
-@import 'statusbar';
+@import "toolbar";
+@import "statusbar";

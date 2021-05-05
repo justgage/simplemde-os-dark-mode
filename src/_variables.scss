@@ -6,16 +6,16 @@
 //
 
 // Add !default so _custom.scss can override it
-$color-background: white !default;
-$color-text: #333 !default;
-$color-text-muted: #777 !default;
-$color-border: #ddd !default;
+$color-background: var(--color-background);
+$color-text: var(--color-text);
+$color-text-muted: var(--color-text-muted);
+$color-border: var(--color-border);
 
-$color-primary: hsl(210, 70%, 50%) !default;
-$color-danger: hsl(0, 65%, 60%) !default;
+$color-primary: var(--color-primary);
+$color-danger: var(--color-danger);
 
-$color-background-faded: darken($color-background, 5%) !default;
-$color-background-selected: rgba(0, 0, 0, 0.1) !default;
+$color-background-faded: var(--color-background-faded);
+$color-background-selected: var(--color-background-selected);
 
 //
 //
@@ -76,13 +76,8 @@ $font-weight-bold: 600 !default;
 
 $font-family: inherit !default;
 
-$font-family-monospace:
-  Menlo,
-  Monaco,
-  Consolas,
-  "Liberation Mono",
-  "Courier New",
-  monospace !default;
+$font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono",
+  "Courier New", monospace !default;
 
 //
 //
@@ -90,7 +85,7 @@ $font-family-monospace:
 //
 
 // For preview section
-$smde-color-background-preview: #fff !default;
+$smde-color-background-preview: var(--color-background) !default;
 // Image alt, HTML tag and attribute
 $smde-color-text-tag: hsl(120, 50%, 50%) !default;
 
@@ -114,7 +109,7 @@ $smde-height-toolbar-fullscreen: $smde-width-toolbar-icon + ($width-gap * 2) !de
 $smde-margin-hidden-scrollbar: 32px !default;
 
 // This is hard coded in simplemde/src/js/simplemde.js
-// Be careful if you want to change it 
+// Be careful if you want to change it
 $smde-breakpoint-mobile: $width-breakpoint !default;
 
 // z-index

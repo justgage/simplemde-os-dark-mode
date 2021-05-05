@@ -1,7 +1,7 @@
 {
-  "name": "simplemde-theme-base",
+  "name": "simplemde-theme-light-dark",
   "version": "0.2.1",
-  "description": "The base theme for SimpleMDE, you can easily create your custom theme based on this.",
+  "description": "This is a theme that responds to dark mode",
   "main": "src/simplemde-theme-base.scss",
   "scripts": {
     "start": "gulp",
@@ -9,7 +9,11 @@
     "lint": "stylelint src/**/*.scss --syntax scss && echo 'stylelint passed!\\n'",
     "test": "npm run lint",
     "preversion": "npm test",
-    "version": "npm run build && git add -A dist docs"
+    "version": "npm run build && git add -A dist docs",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   },
   "repository": {
     "type": "git",
